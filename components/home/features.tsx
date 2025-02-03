@@ -89,12 +89,6 @@ const Features = () => {
 
             {/* Line Bar and NOUS SOMMES */}
             <div className="relative h-screen w-screen flex justify-start items-start bg-[url('/line-bar.svg')] bg-cover bg-center">
-                {/* <Image
-                    src="/line-bar.svg"
-                    alt="Line Bar"
-                    fill
-                    className="object-cover"
-                /> */}
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
