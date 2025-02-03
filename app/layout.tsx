@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={` ${anta.className} antialiased min-h-screen flex flex-col`}
+        className={` ${anta.className} antialiased min-h-screen flex flex-col overflow-x-hidden`}
       >
         <Header />
         <main className="flex-grow">
