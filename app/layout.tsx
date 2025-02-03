@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/header";
 import { siteConfig } from "@/lib/constants";
 import Footer from "@/components/layout/footer";
-
+import { Analytics } from "@vercel/analytics/react"
 const anta = Anta({
   subsets: ["latin"],
   weight: ["400"],
@@ -30,6 +30,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
