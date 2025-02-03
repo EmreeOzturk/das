@@ -3,6 +3,7 @@ import { Anta } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/header";
 import { siteConfig } from "@/lib/constants";
+import Footer from "@/components/layout/footer";
 
 const anta = Anta({
   subsets: ["latin"],
@@ -28,7 +29,7 @@ export default function RootLayout({
         <main className="flex-grow">
           {children}
         </main>
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
