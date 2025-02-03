@@ -1,6 +1,26 @@
+"use client"
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+
 export default function Footer() {
+  // Animation variants for social icons
+  const iconVariants = {
+    hover: {
+      scale: 1.2,
+      rotate: 5,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 10
+      }
+    },
+    tap: {
+      scale: 0.9
+    }
+  };
+
   return (
     <footer className="w-full text-[#00ccff] py-8 max-w-7xl mx-auto">
       <div className="grid grid-cols-12">
@@ -75,24 +95,88 @@ export default function Footer() {
         </div>
       </div>
       {/* Social Media Icons */}
-      {/* github, twitter, discord, telegram */}
       <div className='flex justify-between items-center mt-10'>
-        <div className='text-sm text-zinc-500'>All rights reserved  by das.xyz <br />2025</div>
-        <div className='flex items-center justify-center gap-2'>
-          <Link href="https://github.com/das-bot" target="_blank" className="w-10 h-10">
-            <Image src="/github.svg" alt="Github" width={55} height={55} />
-          </Link>
-          <Link href="https://twitter.com/das_bot" target="_blank" className="w-10 h-10">
-            <Image src="/twitter.svg" alt="Twitter" width={55} height={55} />
-          </Link>
-          <Link href="https://discord.gg/das-bot" target="_blank" className="w-10 h-10">
-            <Image src="/discord.svg" alt="Discord" width={55} height={55} />
-          </Link>
-          <Link href="https://t.me/das_bot" target="_blank" className="w-10 h-10">
-            <Image src="/telegram.svg" alt="Telegram" width={55} height={55} />
-          </Link>
+        <motion.div 
+          initial={{ opacity: 0.8 }}
+          whileHover={{ opacity: 1 }}
+          className='text-sm text-[#00ccff]'
+        >
+          All rights reserved by das.xyz <br />2025
+        </motion.div>
+        <div className='flex items-center justify-center gap-4'>
+          <motion.div
+            whileHover="hover"
+            whileTap="tap"
+            variants={iconVariants}
+          >
+            <Link href="https://github.com/das-bot" target="_blank" className="w-10 h-10 block hover:opacity-80 transition-opacity">
+              <div className="relative w-full h-full">
+                <Image 
+                  src="/github.svg" 
+                  alt="Github" 
+                  width={40} 
+                  height={40}
+                  className="filter hover:brightness-125 transition-all duration-300"
+                />
+              </div>
+            </Link>
+          </motion.div>
+
+          <motion.div
+            whileHover="hover"
+            whileTap="tap"
+            variants={iconVariants}
+          >
+            <Link href="https://twitter.com/das_bot" target="_blank" className="w-10 h-10 block hover:opacity-80 transition-opacity">
+              <div className="relative w-full h-full">
+                <Image 
+                  src="/twitter.svg" 
+                  alt="Twitter" 
+                  width={40} 
+                  height={40}
+                  className="filter hover:brightness-125 transition-all duration-300"
+                />
+              </div>
+            </Link>
+          </motion.div>
+
+          <motion.div
+            whileHover="hover"
+            whileTap="tap"
+            variants={iconVariants}
+          >
+            <Link href="https://discord.gg/das-bot" target="_blank" className="w-10 h-10 block hover:opacity-80 transition-opacity">
+              <div className="relative w-full h-full">
+                <Image 
+                  src="/discord.svg" 
+                  alt="Discord" 
+                  width={40} 
+                  height={40}
+                  className="filter hover:brightness-125 transition-all duration-300"
+                />
+              </div>
+            </Link>
+          </motion.div>
+
+          <motion.div
+            whileHover="hover"
+            whileTap="tap"
+            variants={iconVariants}
+          >
+            <Link href="https://t.me/das_bot" target="_blank" className="w-10 h-10 block hover:opacity-80 transition-opacity">
+              <div className="relative w-full h-full">
+                <Image 
+                  src="/telegram.svg" 
+                  alt="Telegram" 
+                  width={40} 
+                  height={40}
+                  className="filter hover:brightness-125 transition-all duration-300"
+                />
+              </div>
+            </Link>
+          </motion.div>
         </div>
       </div>
     </footer>
   );
-} 
+}
