@@ -5,6 +5,7 @@ import Header from "@/components/layout/header";
 import { siteConfig } from "@/lib/constants";
 import Footer from "@/components/layout/footer";
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 const anta = Anta({
   subsets: ["latin"],
   weight: ["400"],
@@ -31,6 +32,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
