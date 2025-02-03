@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="w-full bg-black text-white py-8 max-w-7xl mx-auto">
+    <header className="w-full  text-white py-8 max-w-7xl mx-auto">
       <div className="grid grid-cols-12">
         {/* Logo Cell */}
         <div className="border border-white p-6 col-span-3 h-full">
