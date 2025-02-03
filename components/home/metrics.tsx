@@ -5,8 +5,7 @@ import Image from "next/image";
 
 const Metrics = () => {
     return (
-        <section className="w-full py-20 relative overflow-hidden">
-
+        <section className="w-full py-20 relative ">
             <div className="absolute top-[50%] right-0 translate-y-[-50%] w-[500px] h-[500px]">
                 <Image
                     src="/globe.svg"
@@ -16,7 +15,7 @@ const Metrics = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-[#00ccff]/20 to-transparent rounded-full blur-xl" />
             </div>
-            <div className="px-12 mt-96">
+            <div className="px-12 mt-[336px]">
                 {/* Header */}
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
@@ -61,14 +60,14 @@ const Metrics = () => {
                 {/* Total Victims Section */}
                 <div className="flex w-full justify-start px-12 items-center">
                     <div className="space-y-4 flex flex-col w-full">
-                        <div className="text-[#00ccff] text-7xl relative">Total Victims
-                            <div className="absolute bottom-14 left-96  w-[1000px]  h-[1000px]">
+                        <div className="text-[#00ccff] text-7xl relative">
+                            Total Victims
+                            <div className="absolute -bottom-32 left-[220px] w-[1500px] h-[1500px]">
                                 <Image
                                     src="/line-bar-2.svg"
                                     alt="Line Bar"
                                     className="object-contain z-50"
-                                    width={1000}
-                                    height={1000}
+                                    fill
                                 />
                             </div>
 
