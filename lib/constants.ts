@@ -1,18 +1,5 @@
 export const siteConfig = {
-  name: "Your Site Name",
-  description: "Your site description",
-  mainNav: [
-    {
-      title: "Home",
-      href: "/",
-    },
-    {
-      title: "About",
-      href: "/about",
-    },
-    {
-      title: "Contact",
-      href: "/contact",
-    },
-  ],
+  name: "DAS Agent",
+  description: "DAS Agent is a AI agent that provides next-generation cyber security solutions.",
+
 }; 

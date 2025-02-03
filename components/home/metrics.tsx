@@ -6,7 +6,7 @@ import Image from "next/image";
 const Metrics = () => {
     return (
         <section className="w-full py-20 relative ">
-            <div className="absolute top-[50%] right-0 translate-y-[-50%] w-[500px] h-[500px]">
+            <div className="absolute top-[50%] right-0 translate-y-[-50%] w-[400px] h-[400px]">
                 <Image
                     src="/globe.svg"
                     alt="Globe"
