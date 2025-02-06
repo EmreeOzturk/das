@@ -87,25 +87,22 @@ export default function Header() {
               ))}
             </div>
             
-            <div className="mt-auto">
               <Link
                 href="https://x.com/dasagentxyz?s=21&t=7Hrigd2DXnuEFeHqb2gHmA"
                 target="_blank"
-                className="flex items-center gap-3 py-6 text-lg font-light tracking-wider hover:text-blue-400 transition-colors border-t border-white/10"
+                className="flex items-center gap-3 mt-3 justify-start text-left text-lg font-light tracking-wider hover:text-blue-400 transition-colors border-t border-white/10"
                 onClick={toggleMenu}
               >
-                <div className="relative w-6 h-6">
+                <div className="relative w-8 h-8 ">
                   <Image
                     src="/icons8-twitter.svg"
                     alt="Twitter"
                     fill
-                    className="object-contain invert"
+                    className="object-contain invert brightness-0"
                   />
                 </div>
-                <span>Follow us on X</span>
                 <span className="text-white/30 ml-auto">↗</span>
               </Link>
-            </div>
           </nav>
         </div>
       </div>
