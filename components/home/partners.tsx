@@ -46,15 +46,7 @@ const Partners = () => {
               Grants
             </motion.h2>
           </div>
-          <div className="z-[999999]">
-            <Link
-              href="https://datsproject.io"
-              target="_blank"
-              className="z-[99999] text-base md:text-lg pl-2 tracking-wider hover:text-blue-400 transition-colors text-center md:text-left block md:inline-block"
-            >
-              *DATS
-            </Link>
-          </div>
+     
         </div>
 
         {/* Partner Logos */}
@@ -111,7 +103,7 @@ const Partners = () => {
           className="w-full flex justify-center mb-8 md:mb-12"
         >
           <div className="w-full md:w-2/3 px-4 md:px-0">
-            <h1 className="text-3xl md:text-5xl text-center mb-4 md:mb-6">
+            <h1 className="text-2xl md:text-5xl text-center mb-4 md:mb-6">
               Certified by{" "}
               <span className="bg-[#00ccff] text-white px-1">GlobalSign</span>
             </h1>
