@@ -75,7 +75,7 @@ const AttackDetails = () => {
   // if (!data) return <p>Loading...</p>;
 
   return (
-    <div className="grid gap-24 py-2 grid-cols-3">
+    <div className="grid gap-24 py-2 grid-cols-2 md:grid-cols-3">
       <div className="">
         <h2>{Math.floor(stats.detected_attacks_today).toLocaleString()}</h2>
         <p className="text-2xl">Detected Attacks Today</p>
@@ -84,7 +84,7 @@ const AttackDetails = () => {
         <h2>{Math.floor(stats.detected_attacks_monthly).toLocaleString()}</h2>
         <p className="text-2xl">Detected Attacks This Month</p>
       </div>
-      <div className="">
+      <div className="hidden md:block">
         <h2>{Math.floor(stats.total_victims).toLocaleString()}</h2>
         <p className="text-2xl">Total Victims</p>
       </div>

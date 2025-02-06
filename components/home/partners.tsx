@@ -29,32 +29,36 @@ const Partners = () => {
   // ];
 
   return (
-    <section className="w-full -mt-[450px] relative ">
-      <div className="container mx-auto px-12">
+    <section className="w-full -mt-[200px] md:-mt-[450px] relative">
+      <div className="container mx-auto px-4 md:px-12">
         {/* Section Title */}
-        <div className=" z-50 pb-10">
+        <div className="z-50 pb-6 md:pb-10">
           <div
             id="grants"
-            className="flex items-start justify-start pt-10 mt-12"
+            className="flex items-center md:items-start justify-center md:justify-start pt-6 md:pt-10 mt-8 md:mt-12"
           >
             <motion.h2
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
-              className="text-9xl text-[#9f01ff]"
+              className="text-5xl md:text-9xl text-[#9f01ff] text-center md:text-left"
             >
               Grants
             </motion.h2>
           </div>
-          <Link href="https://datsproject.io" target="_blank">
-            <p className="text-lg pl-2 tracking-wider hover:text-blue-400 transition-colors text-left">
+          <div className="z-[999999]">
+            <Link
+              href="https://datsproject.io"
+              target="_blank"
+              className="z-[99999] text-base md:text-lg pl-2 tracking-wider hover:text-blue-400 transition-colors text-center md:text-left block md:inline-block"
+            >
               *DATS
-            </p>
-          </Link>
+            </Link>
+          </div>
         </div>
 
         {/* Partner Logos */}
-        <div className="flex justify-between items-center px-4 mb-32">
+        <div className="flex flex-col md:flex-row justify-center md:justify-between items-center px-2 md:px-4 mb-16 md:mb-32 gap-8 md:gap-4">
           {[
             {
               src: "/partners/microsoft.webp",
@@ -82,7 +86,7 @@ const Partners = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative w-[280px] h-[80px]  border-zinc-800 z-50"
+              className="relative w-[200px] md:w-[280px] h-[60px] md:h-[80px] border-zinc-800 z-50"
             >
               <Link
                 href={partner.href}
@@ -104,14 +108,14 @@ const Partners = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="w-full flex justify-center mb-12"
+          className="w-full flex justify-center mb-8 md:mb-12"
         >
-          <div className="w-2/3">
-            <h1 className=" text-5xl text-center mb-6">
+          <div className="w-full md:w-2/3 px-4 md:px-0">
+            <h1 className="text-3xl md:text-5xl text-center mb-4 md:mb-6">
               Certified by{" "}
               <span className="bg-[#00ccff] text-white px-1">GlobalSign</span>
             </h1>
-            <p className=" text-xl text-center">
+            <p className="text-base md:text-xl text-center">
               *The largest audit firm in Web2, providing digital certificates,
               secure connections and identity authentication services.
             </p>
